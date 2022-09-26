@@ -1,6 +1,7 @@
 import express from "express";
 import cors from "cors";
 import { pool } from "./db.js";
+import {PORT} from "/config.js"
 
 const app = express();
 
@@ -39,6 +40,6 @@ app.get("/categories/name/:name", async (req, res) => {
   }
 });
 
-app.listen(3000);
+app.listen(PORT);
 
-console.log("Server listening");
+console.log("Server listening on", PORT);
